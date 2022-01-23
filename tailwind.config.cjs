@@ -1,4 +1,3 @@
-
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -24,7 +23,7 @@ module.exports = {
       teal: colors.teal,
       orange: colors.orange,
 
-      primary: colors.indigo,     
+      primary: colors.zinc,
       secondary: colors.stone,
     },
     extend: {},
