@@ -73,7 +73,7 @@
 					<SectionMenu>
 						<a href="/kategoriler" class="hover:cursor-pointer"> resim </a>
 
-						<SectionMenuItem text="Bebek Battaniyeleri" url="/bebek-battaniyeleri" />
+						<SectionMenuItem text="Product Category" url="/product-category" />
 					</SectionMenu>
 				</MegaMenuItem>
 				<MegaMenuItem text="Hakkımızda" url="/hakkimizda" />

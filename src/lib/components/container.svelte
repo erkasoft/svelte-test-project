@@ -1,6 +1,6 @@
 <script>
 	export let size = 'medium';
-	export let className;
+	export let className = '';
 
 	let ortala = (size =='medium' || size == 'large')
 </script>
