@@ -2,7 +2,7 @@
 	import DownArrow from '$lib/components/mobile-menu/svg/down-arrow.svelte';
 
 	export let items = [];
-	export let collapsed = false;
+	export let collapsed = true;
 	let menuList = [];
 
 	function clickHandler(index) {
@@ -19,7 +19,7 @@
 					<DownArrow />
 				</span>
 			</span>
-			<ul class="{collapsed ? 'hidden' : ''} mobileSubMenuList " bind:this={menuList[i]}>
+			<ul class="{collapsed ? 'hidden' : ''} mobileSubMenuList " bind:this={menuList[i]} >
 				{#each item.subItems as subMenuItem}
 					<li><a href={subMenuItem.href}>{subMenuItem.title}</a></li>
 				{/each}

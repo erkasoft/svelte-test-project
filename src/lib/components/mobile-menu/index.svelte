@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition'
 	import MobileItem from './mobile-item.svelte';
 	import Backdrop from '$lib/components/backdrop.svelte';
 	import Close from './svg/close.svelte';
@@ -18,9 +19,10 @@
 
 <Backdrop mobile={mobileMenuActive} class="xl:hidden" />
 <div
-	class="fixed top-0 left-0 z-50 flex w-10/12 xl:hidden h-screen py-10 pl-3 shadow-2xl mobilemenu"
+	class="transition duration-300 ease-in-out fixed top-0 left-0 z-50 flex w-10/12 xl:hidden h-screen py-10 pl-3 shadow-2xl mobilemenu"
 	class:hidden={!mobileMenuActive}
 	class:block={mobileMenuActive}
+transition:fade
 >
 	<span
 		on:click={() => (mobileMenuActive = !mobileMenuActive)}
