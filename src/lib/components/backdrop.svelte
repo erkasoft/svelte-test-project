@@ -1,5 +1,4 @@
 <script>
-	/*export let class = '';*/
 	export let mobile;
 </script>
 

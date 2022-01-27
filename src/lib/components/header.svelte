@@ -4,6 +4,7 @@
 	import MegaMenu from '$lib/components/megamenu.svelte';
 	import SectionMenu from '$lib/components/megamenu-section.svelte';
 	import SectionMenuItem from '$lib/components/megamenu-section-item.svelte';
+	import MobileMenu from '$lib/components/mobile-menu/index.svelte'
 
 	const Logo = '/logo.svg';
 	const layout = 'center';
@@ -16,6 +17,23 @@
 	let mobile = false;
 
 	siteTitle = import.meta.env.VITE_SITE_TITLE;
+
+
+	let mobileMenu = [
+		{ title: 'Ana Sayfa', href: '/' },
+		{ title: 'Ürünler', href:'#', 
+			subItems: [
+				{ title: 'Ürün Kategori 1', href:'/product-category' },
+				{ title: 'Ürün Kategori 2', href:'/product-category' }
+			]},
+		{ title: 'Ürünler 2', href:'#', 
+			subItems: [
+				{ title: 'Ürün Kategori 3', href:'/product-category' },
+				{ title: 'Ürün Kategori 4', href:'/product-category' }
+			]},
+		{ title: 'Hakkımızda', href: '/hakkimizda' },
+		{ title: 'İletişim', href: '/iletisim' }
+	]
 
 	function clickHandler() {
 		console.log('clicked');
@@ -101,7 +119,10 @@
 					/>
 				</svg>
 			</span>
-			<ul class="mobile-menu-item xl:hidden">mobile menü</ul>
+<ul class="mobile-menu-item xl:hidden">
+<MobileMenu items={mobileMenu} />
+</ul>
 		</div>
 	</section>
 </header>
+
