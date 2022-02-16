@@ -5,7 +5,7 @@
 	export let customMeta;
 	export let meta = {
 		type: 'website',
-		image: '',
+		image: '/logo.svg',
 		...customMeta	};
 
 	const twitterUserName = '@ertankayalar';
@@ -13,7 +13,6 @@
 
 <svelte:head>
 	<title>{title} - {siteTitle}</title>
-
 	<meta property="og:type" content={meta.type} />
 	<meta property="og:site_name" content={siteTitle} />
 	<meta property="og:description" content={description} />
