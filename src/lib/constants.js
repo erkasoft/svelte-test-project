@@ -14,6 +14,10 @@ export const productImage3 =
 export const productImage4 =
 	'https://res.cloudinary.com/daqzk9ljd/image/upload/v1643172058/starter/bedspread_vwsrj2.jpg';
 
+export const slide1 = 'https://res.cloudinary.com/erkasoft/image/upload/v1644997320/aktekinofset.com/1_symzkd.jpg';
+export const slide2 = 'https://res.cloudinary.com/erkasoft/image/upload/v1644997246/aktekinofset.com/2_hiejau.jpg';
+export const slide3 = 'https://res.cloudinary.com/erkasoft/image/upload/v1644997441/aktekinofset.com/4_zoczuo.jpg';
+
 
 export const productGalleryImages = [
 'https://res.cloudinary.com/erkasoft/image/upload/v1644997541/aktekinofset.com/21_je70sf.jpg',

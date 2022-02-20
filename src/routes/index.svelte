@@ -1,18 +1,37 @@
 <script>
 	import PageHead from '$lib/components/page-head.svelte';
-	import Hero from '$lib/components/hero.svelte';
 	import Container from '$lib/components/container.svelte';
 	import PhotoGallery from '$lib/components/photo-gallery/main.svelte';
-	import { productGalleryImages, productImage1, productImage2, productImage3, productImage4 } from '$lib/constants';
-
+	import { productGalleryImages, slide1, slide2, slide3 } from '$lib/constants';
+import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	/*import '@splidejs/splide/dist/css/splide.min.css';*/
+	import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 	const meta = {
 		image: '/logo.svg'
 	};
 </script>
 
 <PageHead title="Ana Sayfa" customMeta={meta} />
-
-<Hero title="Aktekin Ofset" />
+<div>
+	<Splide options={ {
+    rewind: true,
+	type: 'loop',
+	speed: 800,
+	height: 500,
+	autoWidth: true,
+    gap   : '1rem',
+  } }>
+  <SplideSlide>
+    <img src={slide1} alt="Image 1" />
+  </SplideSlide>
+  <SplideSlide>
+    <img src={slide2} alt="Image 2" />
+  </SplideSlide>
+<SplideSlide>
+<img src={slide3} alt="kutular"  />
+</SplideSlide>
+</Splide>
+</div>	
 <div class="w-full bg-white py-20">
 	<Container className="text-center">
 		<h2  id="urunler" class="text-4xl font-semibold my-20 text-gray-600">Ürünler</h2>
