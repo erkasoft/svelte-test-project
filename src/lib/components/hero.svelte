@@ -10,7 +10,7 @@
 
 
 
-    <div class='w-full bg-gray-100 h-auto z-0'>
+    <div class='w-full bg-gray-100 h-auto z-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-hero'>
       <div class='container mx-auto py-20 text-center animate__animated animate__fadeIn animate__slower'>
         <h1 class='text-5xl py-10 text-gray-600 font-semibold '>
           {title}

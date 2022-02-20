@@ -34,18 +34,16 @@
 	<div
 		class="fixed top-0 left-0 z-20 flex items-center justify-center w-screen h-screen modal-container"
 		role="button"
+		on:click={closeHandler}
 	>
 		<div class="absolute w-screen h-screen bg-primary-800 opacity-60" />
 
 		<div
 			class="z-50 w-9/12 mx-auto my-auto bg-transparent rounded shadow-none modal-container md:w-10/12"
-			on:click={modalHandler}
+			on:click={closeHandler}
 			role="button"
 		>
-			<div
-				class="flex items-center justify-center w-full p-2 bg-transparent"
-style:height='70%'
-			>
+			<div class="flex items-center justify-center w-full p-2 bg-transparent" style:height="70%">
 				<div
 					class="absolute top-0 right-0 z-50 flex items-center mt-4 mr-4 text-sm text-white cursor-pointer modal-close"
 				>
@@ -70,7 +68,7 @@ style:height='70%'
 					</button>
 				</div>
 				<div class="w-4/5 flex items-center justify-center">
-					<img src={photo} alt="product detail" />
+					<img src={photo} alt="product detail" class="w-4/5 h-4/5" />
 				</div>
 			</div>
 		</div>

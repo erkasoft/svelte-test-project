@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 
 body {
 	@apply bg-primary-50 text-primary-800;
+}
+
+.bg-ani {
+	background-image: url('/static/bg-ani-boxes.svg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.bg-parallax-hero{
+	background-image: url(' https://res.cloudinary.com/erkasoft/image/upload/v1644997320/aktekinofset.com/1_symzkd.jpg');
 }
 
 .bg-footer {
