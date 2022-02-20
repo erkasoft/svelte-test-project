@@ -1,13 +1,12 @@
 <script>
 	import SimpleMenu from '$lib/components/simplemenu.svelte';
-	import { FOOTER_MENU } from '$lib/constants';
+	import { MENU_ITEMS } from '$lib/constants';
   import ExternalLink from '$lib/components/external-link.svelte';
 
-	const startDate = '2022';
-	export let siteTitle;
-	export let footerMenu;
-	footerMenu = FOOTER_MENU;
-	siteTitle = import.meta.env.VITE_SITE_TITLE;
+	const startDate = import.meta.env.VITE_START_DATE;
+	/*export let siteTitle = 'Svelte Starter';*/
+	export let footerMenu = MENU_ITEMS;
+	let siteTitle = import.meta.env.VITE_SITE_TITLE;
 </script>
 
     <footer class="w-full py-10 bg-transparent">

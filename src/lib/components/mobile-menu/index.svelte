@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Backdrop mobile={mobileMenuActive} class="xl:hidden" />
+<Backdrop mobile={mobileMenuActive} />
 <div
 	class="transition duration-300 ease-in-out fixed top-0 left-0 z-50 flex w-10/12 xl:hidden h-screen py-10 pl-3 shadow-2xl mobilemenu"
 	class:hidden={!mobileMenuActive}

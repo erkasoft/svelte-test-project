@@ -6,6 +6,8 @@
 	import SectionMenuItem from '$lib/components/mega-menu/section-item.svelte';
 	import MobileMenu from '$lib/components/mobile-menu/index.svelte';
 
+	import { MENU_ITEMS } from '$lib/constants';
+
 	const Logo = '/logo.svg';
 	const layout = 'center';
 	export let siteTitle;
@@ -27,26 +29,9 @@
 
 	let mobileMenuItems = [
 		{ title: 'Ana Sayfa', href: '/' },
-		{
-			title: 'Ürünler',
-			href: '#',
-			subItems: [
-				{ title: 'Ürün Kategori 1', href: '/product-category' },
-				{ title: 'Ürün Kategori 2', href: '/product-category' }
-			],
-			hoverable: true,
-		},
-		{
-			title: 'Ürünler 2',
-			href: '#',
-			subItems: [
-				{ title: 'Ürün Kategori 3', href: '/product-category' },
-				{ title: 'Ürün Kategori 4', href: '/product-category' }
-			],
-			hoverable: true,
-		},
-		{ title: 'Hakkımızda', href: '/hakkimizda' },
-		{ title: 'İletişim', href: '/iletisim' }
+		{ title: 'Ürünler', href: '#urunler' },
+		{ title: 'Hakkımızda', href: '#hakkimizda' },
+		{ title: 'İletişim', href: '#iletisim' }
 	];
 </script>
 
@@ -89,19 +74,9 @@
 			class="flex-wrap items-center hidden w-full h-auto text-sm xl:w-full  xl:flex megamenu"
 			class:justify-center={center}
 		>
-			<MegaMenu items={mobileMenuItems}>
-				<MegaMenuItem text="Giriş" url="/" />
-				<MegaMenuItem text="Kategoriler" hoverable>
-					<SectionMenu>
-						<a href="/kategoriler" class="hover:cursor-pointer"> resim </a>
-
-						<SectionMenuItem text="Product Category" url="/product-category" />
-					</SectionMenu>
-				</MegaMenuItem>
-				<MegaMenuItem text="Hakkımızda" url="/hakkimizda" />
-				<MegaMenuItem text="İletişim" url="/iletisim" />
+			<MegaMenu items={MENU_ITEMS}>
 			</MegaMenu>
 		</div>
-		<MobileMenu items={mobileMenuItems} bind:mobileMenuActive />
+		<MobileMenu items={MENU_ITEMS} bind:mobileMenuActive />
 	</section>
 </header>

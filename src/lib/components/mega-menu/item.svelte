@@ -1,8 +1,8 @@
 <script>
 	export let text;
 	export let url;
-	export let toggleable;
-	export let hoverable;
+	export let toggleable = false;
+	export let hoverable = false;
 </script>
 
 <li class:toggleable class:hoverable class="megamenu-main-item">
