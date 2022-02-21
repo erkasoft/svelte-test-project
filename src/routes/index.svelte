@@ -3,38 +3,55 @@
 	import Container from '$lib/components/container.svelte';
 	import PhotoGallery from '$lib/components/photo-gallery/main.svelte';
 	import { productGalleryImages, slide1, slide2, slide3 } from '$lib/constants';
-import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	/*import '@splidejs/splide/dist/css/splide.min.css';*/
-	import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/dist/css/splide.min.css';
+	/*import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';*/
 	const meta = {
 		image: '/logo.svg'
 	};
 </script>
 
 <PageHead title="Ana Sayfa" customMeta={meta} />
-<div>
-	<Splide options={ {
-    rewind: true,
-	type: 'loop',
-	speed: 800,
-	height: 500,
-	autoWidth: true,
-    gap   : '1rem',
-  } }>
-  <SplideSlide>
-    <img src={slide1} alt="Image 1" />
-  </SplideSlide>
-  <SplideSlide>
-    <img src={slide2} alt="Image 2" />
-  </SplideSlide>
-<SplideSlide>
-<img src={slide3} alt="kutular"  />
-</SplideSlide>
-</Splide>
+	<div class="w-full bg-white">
+	<Container>
+<div class="flex flex-wrap">
+	
+<div class="w-1/2">
+	<Splide
+		options={{
+			rewind: true,
+			type: 'fade',
+			speed: 1800,
+			gap: '1rem',
+height:'500px', autoplay: true , arrows: false, pagination: false
+		}}
+	>
+		<SplideSlide>
+			<div class="w-full h-full flex items-center justify-center">
+				<img src={slide1} alt="Image 1" height="500px" width="500px" />
+			</div>
+		</SplideSlide>
+		<SplideSlide>
+			<div class="w-full h-full flex items-center justify-center">
+				<img src={slide2} alt="Image 2" height="500px" width="500px" />
+			</div>
+		</SplideSlide>
+		<SplideSlide>
+			<div class="w-full h-full flex items-center justify-center">
+				<img src={slide3} alt="Image 2" height="500px" width="500px"/>
+			</div>
+		</SplideSlide>
+	</Splide>
+</div>
+<div class="w-1/2 flex items-center justify-center">
+  <h1 class="text-4xl text-gray-600">Aktekin Ofset</h1>
+</div>
 </div>	
+	</Container>
+	</div>
 <div class="w-full bg-white py-20">
 	<Container className="text-center">
-		<h2  id="urunler" class="text-4xl font-semibold my-20 text-gray-600">Ürünler</h2>
+		<h2 id="urunler" class="text-4xl font-semibold my-20 text-gray-600">Ürünler</h2>
 		<PhotoGallery photos={productGalleryImages} />
 	</Container>
 </div>
@@ -55,3 +72,9 @@ import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 		<h2 id="iletisim" class="text-2xl">İletişim</h2>
 	</Container>
 </div>
+
+<style type="text/css" media="screen">
+	.splide__slide {
+		height: 500px;
+	}
+</style>
