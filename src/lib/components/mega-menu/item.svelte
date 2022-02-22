@@ -30,7 +30,7 @@
 	{/if}
 
 	{#if !toggleable && !hoverable}
-		<a href={url} class="relative block px-2 py-6 text-sm lg:p-6">
+		<a href={url} class="relative block px-2 py-6 text-md lg:p-6">
 			{text}
 		</a>
 	{/if}

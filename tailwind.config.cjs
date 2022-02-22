@@ -11,7 +11,7 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.neutral,
+      gray: colors.gray,
       red: colors.red,
       yellow: colors.amber,
       green: colors.green,
@@ -23,8 +23,8 @@ module.exports = {
       teal: colors.teal,
       orange: colors.orange,
 
-      primary: colors.zinc,
-      secondary: colors.stone,
+      primary: colors.neutral,
+      secondary: colors.orange,
     },
     fontFamily: {
       sans: [

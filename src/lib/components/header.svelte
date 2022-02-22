@@ -8,7 +8,7 @@
 
 	import { MENU_ITEMS } from '$lib/constants';
 
-	const Logo = '/logo.svg';
+	const Logo = 'https://res.cloudinary.com/erkasoft/image/upload/v1645535389/aktekinofset.com/aktekin-logo-small_f9e1vu.png';
 	const layout = 'center';
 	export let siteTitle;
 	const center = true;
@@ -37,11 +37,11 @@
 
 <header class="w-full">
 	<section
-		class="flex flex-wrap w-full items-center"
+		class="bg-white flex flex-wrap w-full items-center"
 		class:flex-col={center == true}
 		class:items-center={center == true}
 	>
-		<div class="flex items-center justify-center w-full py-5 xl:w-1/3 xl:justify-start xl:pl-2 ">
+		<div class=" flex items-center justify-center w-full py-5 xl:w-1/3 xl:justify-start xl:pl-2 ">
 			<div
 				class="px-4 text-gray-600 cursor-pointer xl:hidden"
 				id="burger"
@@ -64,7 +64,7 @@
 			</div>
 			<span class:mx-auto={center == true}>
 				<a href="/">
-					<img src={Logo} alt={siteTitle} width={100} />
+					<img src={Logo} alt={siteTitle} width={300} />
 				</a>
 			</span>
 		</div>

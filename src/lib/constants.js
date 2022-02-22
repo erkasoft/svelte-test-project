@@ -1,9 +1,9 @@
 
 export const MENU_ITEMS = [
-		{ title: 'Giriş', href: '/' },
-		{ title: 'Ürünler', href: '/#urunler' },
-		{ title: 'Hakkımızda', href: '/#hakkimizda' },
-		{ title: 'İletişim', href: '/iletisim' }
+		{ title: 'GİRİŞ', href: '/' },
+		{ title: 'ÜRÜNLER', href: '/#urunler' },
+		{ title: 'HAKKIMIZDA', href: '/#hakkimizda' },
+		{ title: 'İLETİŞİM', href: '/#iletisim' }
 	];
 export const productImage1 =
 	'https://res.cloudinary.com/daqzk9ljd/image/upload/v1643172062/starter/pillov_ridhnl.jpg';
